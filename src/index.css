@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --strong-cyan: 172deg 67% 45%;
+    --very-dark-cyan: 183deg 100% 15%;
+    --dark-grayish-cyan: 186deg 14% 43%;
+    --grayish-cyan: 184deg 14% 56%;
+    --light-grayish-cyan: 185deg 41% 84%;
+    --very-light-grayish-cyan: 189deg 41% 97%;
+    --white: 0deg 0% 100%;
+  }
+  main {
+    @apply text-[24px] font-spaceMono font-black;
+  }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: textfield !important;
+  }
+}
