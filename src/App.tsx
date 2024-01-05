@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { MouseEventHandler, useEffect, useState } from "react";
 import TipButton from "./components/TipButton";
 
 export default function App() {
@@ -18,11 +18,7 @@ export default function App() {
   const tipPerPerson: number = parseFloat((tipAmount / people).toFixed(2));
   const pricePerPerson: number = parseFloat((totalPrice / people).toFixed(2));
 
-  const handleTip: number = (e) => {
-    setTip(parseFloat(e.target.value));
-  };
-
-  const handleReset: number = () => {
+  const handleReset: MouseEventHandler<HTMLButtonElement> = () => {
     setTotalBill(0);
     setTip(0);
     setTipAmount(0);
@@ -61,7 +57,7 @@ export default function App() {
                 <TipButton
                   key={tipArr}
                   percentage={tipArr}
-                  tipChange={handleTip}
+                  tipChange={(e) => setTip(parseFloat(e.currentTarget.value))}
                 />
               ))}
               <div>

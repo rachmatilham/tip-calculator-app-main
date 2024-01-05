@@ -1,6 +1,8 @@
+import { MouseEventHandler } from "react";
+
 type TipButtonProps = {
   percentage: number;
-  tipChange: number;
+  tipChange: MouseEventHandler<HTMLInputElement>;
 };
 
 export default function TipButton({ percentage, tipChange }: TipButtonProps) {
