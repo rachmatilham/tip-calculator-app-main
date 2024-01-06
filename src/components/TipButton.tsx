@@ -13,7 +13,6 @@ export default function TipButton({ percentage, tipChange }: TipButtonProps) {
         name="tip-value"
         id={`${percentage}`}
         value={percentage / 100}
-        placeholder={`${percentage}%`}
         className="hidden"
         onClick={tipChange}
       />
