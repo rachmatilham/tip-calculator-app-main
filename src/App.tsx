@@ -108,8 +108,11 @@ export default function App() {
                 className="text-veryDarkCyan text-right bg-transparent placeholder:text-grayishCyan focus:outline-none hover:cursor-pointer"
                 value={people}
                 placeholder="0"
+                min={0}
                 onChange={(e) =>
-                  people > 0 ? setPeople(parseFloat(e.target.value)) : ""
+                  people >= 0 || people !== null
+                    ? setPeople(parseFloat(e.target.value))
+                    : ""
                 }
               />
             </div>
